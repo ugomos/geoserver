@@ -1246,7 +1246,9 @@ public class GeoServerSystemTestSupport extends GeoServerBaseTestSupport<SystemT
      */
     protected BufferedImage getAsImage(String path, String mime) throws Exception {
         MockHttpServletResponse resp = getAsServletResponse(path);
-        assertEquals(mime, resp.getContentType());
+        //assertEquals(mime, resp.getContentType());
+        assertEquals(resp.getContentAsString(), mime, 
+        resp.getContentType());
         InputStream is = getBinaryInputStream(resp);
         return ImageIO.read(is);
     }

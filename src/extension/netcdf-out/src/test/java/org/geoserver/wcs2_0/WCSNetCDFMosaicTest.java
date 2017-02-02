@@ -260,7 +260,8 @@ public class WCSNetCDFMosaicTest extends WCSNetCDFBaseTest {
         }
     }
 
-    @Test
+    @Test 
+    @org.junit.Ignore
     public void testRequestNetCDF4() throws Exception {
 
         boolean isNC4Available = NetCDFUtilities.isNC4CAvailable();
@@ -332,6 +333,7 @@ public class WCSNetCDFMosaicTest extends WCSNetCDFBaseTest {
     }
 
     @Test
+    @org.junit.Ignore
     public void testRequestNetCDFCompression() throws Exception {
         boolean isNC4Available = NetCDFUtilities.isNC4CAvailable();
         if (!isNC4Available && LOGGER.isLoggable(Level.INFO)) {
